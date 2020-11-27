@@ -4,8 +4,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: centos:8
     steps:
       - name: setup
         run: kind create cluster
