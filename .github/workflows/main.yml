@@ -1,0 +1,15 @@
+name: Build
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pwd
+        run: echo $(pwd)
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: pwd
+        run: echo $(pwd)
+      - name: ls
+        run: ls -lah
