@@ -7,11 +7,7 @@ jobs:
     container:
       image: centos:8
     steps:
-      - name: pwd
-        run: echo $(pwd)
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: pwd
-        run: echo $(pwd)
-      - name: ls
-        run: ls -lah
+      - name: setup
+        run: kind create cluster
+      - name: teardown
+        run: kind delete cluster
